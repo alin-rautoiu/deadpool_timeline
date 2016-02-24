@@ -1,6 +1,6 @@
 var w = 1200;
-var h = $(window).height() - 50;
-                   
+var h = $(window).height() - 25;
+var edge_length = h / 7.5;                   
 var force = d3.layout.force()
                      .nodes(dataset.nodes)
                      .links(dataset.edges)
@@ -137,7 +137,7 @@ var distance = 65;
 var last_depth;
     edges[0].forEach(function(d, i) {
        
-            d.__data__.source.y += d.__data__.source.depth * 120 - d.__data__.source.y;
+            d.__data__.source.y += d.__data__.source.depth * edge_length - d.__data__.source.y;
             
             if(d.__data__.source.type === 'influence'){
                 last_depth = d.__data__.target.depth;
