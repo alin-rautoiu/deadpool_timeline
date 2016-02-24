@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+
+<head>
+	<title>Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	    
+    
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">    	          	
+    <link rel="stylesheet" href="css/plot.css"/>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/d3.v3.js"></script>
+    <script src="js/dataset.js"></script>
+    <script src="js/plot_interaction.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</head>
+
+<body>
+	<div id="title" class="col-md-12 nopadding">
+		
+	</div>     
+       
+	<div class="container">            
+        <div class="row text-right">
+			<nav class="navbar" data-spy="affix" id="myScrollspy">
+				<ul class="nav nav-stacked">
+                    <li style="display:none"><a href="#title"></a></li>
+                        <li><a href="#section2">1940</a></li>
+
+				</ul>				
+			</nav>
+        </div>
+        <!-- Hawkeye #1 Cover -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="section-img" id="hawkeye_1">   
+                </div>
+            </div>
+        </div>
+        <!-- Text Cover -->
+        <div class="row">
+			<div  class="col-md-6 col-md-offset-3 novertical">
+				<div id="section1">
+				</div>
+			</div>
+        </div>
+        <div class="row">
+			<div  class="col-md-6 col-md-offset-3 novertical">
+				<div id="section1-text">					
+                    
+				</div>
+			</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8" id="drawing_area">
+                <script src="js/plot_data_force.js"></script>
+            </div>
+            <div id="writing_area" class="col-md-4">
+                <div id="edge_detail" class="affix">
+            </div>
+        </div>
+        </div>    
+        
+    </div>    
+
+</body>
+
+</html>
