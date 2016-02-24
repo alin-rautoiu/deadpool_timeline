@@ -1,4 +1,10 @@
 $(document).ready( function(){
+    var mobile = ($(window).width() < 800);;
+    
+    if (mobile === true){
+        $("#edge_detail").removeClass('affix');
+    }
+    
     $('#hawkeye').on('click', function(){
        console.log("Hawkeye"); 
     });
@@ -23,11 +29,12 @@ $(document).ready( function(){
 
         $('#edge_detail').show();
         $('#edge_detail').empty();
-        
-        $('#drawing_area').animate({
-            left: '-300px',}
-            ,300
-            );
+        if (mobile === false){
+            $('#drawing_area').animate({
+                left: '-300px',}
+                ,300
+                );
+        }
         
         var name = $(this).parent().attr('id');
         
@@ -54,10 +61,7 @@ $(document).ready( function(){
             break;
             default:
                 break;
-        }
-        
-        
-        
+        }        
     });
     
     $('circle').on('mousemove', function(){
@@ -137,10 +141,12 @@ $(document).ready( function(){
             return;
         }
         
-        $('#drawing_area').animate({
-            left: '-300px',}
-            ,300
-            );
+        if (mobile === false){        
+            $('#drawing_area').animate({
+                left: '-300px',}
+                ,300
+                );
+        }
         
         $('#edge_detail').show();
         $('#edge_detail').empty();

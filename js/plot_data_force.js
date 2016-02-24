@@ -1,6 +1,9 @@
-var w = 1200;
+var w = $(window).width() > 1200 ? $(window).width() * 2 / 3 : $(window).width();
 var h = $(window).height() - 25;
-var edge_length = h / 7.5;                   
+var mobile = ($(window).width() < 800);
+var drawing_size = mobile ? 10 : 25;
+var edge_length = h / 7.5;
+                   
 var force = d3.layout.force()
                      .nodes(dataset.nodes)
                      .links(dataset.edges)
@@ -64,7 +67,7 @@ var nodeSize = function(d){
                     size++;
                 }
             });
-            return size * 10;
+            return size * drawing_size;
 }
 
 var nodes = gnodes
@@ -72,12 +75,12 @@ var nodes = gnodes
             var g = d3.select(this)
             if(d.type == 'influence'){
                 g.append('rect')
-                .attr('width', 50
+                .attr('width', drawing_size * 2
                 )
-                .attr('height', 50);
+                .attr('height', drawing_size * 2);
             } else if (d.type == 'deadpool'){
                 g.append('circle')
-                .attr('r', 25);
+                .attr('r', drawing_size);
             }
         })
         .attr("id", function(d, i) {
@@ -133,7 +136,7 @@ label
 force.on("tick", function(e) {
 var k = e.alpha;
 var left_right = 0;
-var distance = 65;
+var distance = w / 18.5;
 var last_depth;
     edges[0].forEach(function(d, i) {
        
@@ -162,9 +165,10 @@ var last_depth;
         var sourcey = d.source.y; 
         var targetx = d.target.x < w ? d.target.x : w - 50;
         var targety = d.target.y; 
+        var correction = mobile ? 10 : 25;
         
         if(d.source.type === 'influence'){
-            return "M " + (sourcex + 25) + " " + (sourcey + 25) + " L " + targetx + " " + targety;                          
+            return "M " + (sourcex + correction) + " " + (sourcey + correction) + " L " + targetx + " " + targety;                          
         } else {
             return "M" + sourcex + "," + sourcey + "A" + h/2 + "," + h/2 + " 0 0,0 " + targetx + "," + targety;
         }
