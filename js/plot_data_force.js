@@ -1,5 +1,5 @@
 var w = 1200;
-var h = 900;
+var h = $(window).height() - 50;
                    
 var force = d3.layout.force()
                      .nodes(dataset.nodes)
@@ -39,6 +39,9 @@ var edges = svg.selectAll("path")
         .append("path")
         .attr("id", function(d, i) {
             return d.name;
+        })
+        .attr("class", function(d, i) {
+            return d.source.type;
         });       
 
 var gnodes = svg.selectAll("g.gnode")

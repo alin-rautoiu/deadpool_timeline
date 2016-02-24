@@ -23,7 +23,7 @@ path{
     fill:none;
 }
 
-path:hover {
+path .influence:hover {
     stroke:yellow;
     /*-webkit-animation-name: hover_line; 
     -webkit-animation-duration: 0.5s;
