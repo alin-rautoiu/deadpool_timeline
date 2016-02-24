@@ -116,13 +116,15 @@ var label = gnodes.append("text")
             .style('fill', '#000')    
                 ;             
 
+var correction = mobile ? 10 : 25;
+
 label
     .attr("text-anchor", "middle")
     .attr("y", function(d){
         if(d.type === 'influence'){
-            return -1 * nodeSize(d) - 5;
+            return -1 * nodeSize(d) + correction + 10;
         } else {
-            return -1 * nodeSize(d) - 20;
+            return -1 * nodeSize(d) + correction - 5;
         }
     })
     .attr("x", function(d){
@@ -165,7 +167,6 @@ var last_depth;
         var sourcey = d.source.y; 
         var targetx = d.target.x < w ? d.target.x : w - 50;
         var targety = d.target.y; 
-        var correction = mobile ? 10 : 25;
         
         if(d.source.type === 'influence'){
             return "M " + (sourcex + correction) + " " + (sourcey + correction) + " L " + targetx + " " + targety;                          
