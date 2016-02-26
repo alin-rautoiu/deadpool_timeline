@@ -1,7 +1,7 @@
 var dataset = {
         nodes: [
                 { name: "deathstroke", depth: 1, type:'influence' }, // 0
-                { name: "spiderman", depth: 1, type:'influence' }, // 1
+                { name: "spiderman", depth: 0.5, type:'influence' }, // 1
                 { name: "wolverine", depth: 1, type:'influence' }, // 2
                 { name: "ambushbug", depth: 1.5, type:'influence' }, // 3
                 { name: "shehulk", depth: 1.5, type:'influence'}, // 4

@@ -17,7 +17,7 @@ var force = d3.layout.force()
 var colors = d3.scale.category10();
 
 var colors = [
-    'rgb(254, 243, 3)' //0
+    'rgb(254, 243, 3)' 
     ,'rgb(254, 10, 10)'
     ,'rgb(201, 169, 50)'
     ,'rgb(141, 200, 60)'

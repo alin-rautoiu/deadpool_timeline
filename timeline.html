@@ -9,10 +9,11 @@
     
 	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">    	          	
-    <link rel="stylesheet" href="css/plot.css"/>
+    
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/d3.v3.js"></script>
     <script src="js/dataset.js"></script>
+    <script src="js/dynamic_text.js"></script>
     <script src="js/plot_interaction.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
@@ -20,9 +21,18 @@
 </head>
 
 <body>
-	<div id="title" class="col-md-12 nopadding">
-		
-	</div>     
+	<div id="title">
+        <div class="row">
+            <h1 class="col-md-4 col-md-offset-4">Deadpool's Mutations</h1>
+        </div>
+        <div class="row">
+            <p class="col-md-4 col-md-offset-4">How the "Merc with a Mouth" turned from a derrivative gritty nobody to a worldwide success.</p>
+        </div>
+	</div>    
+    
+    <div id="cover">
+        <img src="assets/deadpool_cover.jpg"/>
+    </div> 
        
 	<div class="container">            
         <div class="row text-right">
@@ -34,33 +44,22 @@
 				</ul>				
 			</nav>
         </div>
-        <!-- Introductions Cover -->
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="section-img" id="hawkeye_1">   
-                </div>
-            </div>
-        </div>
-        <!-- Text Cover -->
+        
         <div class="row">
 			<div  class="col-md-6 col-md-offset-3 novertical">
-				<div id="section1">
+				<div id="section1-text">
+                    <p>Deadpool, the violent and irreverant mutant mercenary, broke records for R-rated movies and is already shifting the superhero film aesthetic, despite its meager budget and tumoltuous production.</p>
+                    <p>But while his 4th-wall breaking, pop-culture referencing, limbs ripping journey on the big screen is just beginning, he already had quite a ride in comics.</p>
 				</div>
 			</div>
         </div>
-        <div class="row">
-			<div  class="col-md-6 col-md-offset-3 novertical">
-				<div id="section1-text">					
-                    
-				</div>
-			</div>
-        </div>
+        
         <div class="row">
             <div class="col-md-8" id="drawing_area">
                 <script src="js/plot_data_force.js"></script>
             </div>
             <div id="writing_area" class="col-md-4">
-                <div id="edge_detail" class="affix">
+                <div id="detail_text" class="affix">
             </div>
         </div>
         </div>    
