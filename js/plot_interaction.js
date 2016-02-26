@@ -140,14 +140,15 @@ $(document).ready( function(){
     
     $(window).on('scroll', function(){
 
-        if(shown){
+        if(shown && !mobile){
             
             $('#drawing_area').animate({
                 left: '0px',}
                 ,300
             );
             $('#writing_area').animate({
-                opacity: '0',}
+                opacity: '0',
+                }
                 ,300
             );
             shown = false;
