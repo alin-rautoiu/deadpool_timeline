@@ -55,38 +55,33 @@ $(document).ready( function(){
     $('circle').on('mouseover', function(){
         var r = $(this).attr('r');
         var name = $(this).attr('id');
+        
+        $(this).velocity({ r: 28}), { duration: 250 };
                 
-        $(this).siblings('text').animate({
-           top: 20
-        },{
-          step: function(top){
-              $(this).css('font-size', top);
-          }  
-        }, 100);
+        $(this).siblings('text').velocity({ fontSize: "16px" }, { duration: 250 });
 
     });
     
     $('circle').on('mouseout', function(){
         if(!isDragging){
-            var r = $(this).attr('r');
-            $(this).siblings('text').animate({
-                top: 14
-            },{
-                step: function(top){
-                    $(this).css('font-size', top);
-                }  
-            }, 100);
+            var r = $(this).attr('r');            
+            
+            $(this).velocity({ r: 25}, { duration: 250 });
+            
+            $(this).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
         }        
     });
     
     $('path').on('mouseover', function(){
         if(!isDragging && $(this).hasClass('influence')){
-            $(this).css('stroke', 'yellow');
+            //$(this).css('stroke', 'yellow');
+            $(this).velocity({strokeWidth: '6'}, { duration: 250 });
         }
     })
     
     $('path').on('mouseout', function(){
-        $(this).css('stroke', '#ccc');
+        //$(this).css('stroke', '#ccc');
+        $(this).velocity({strokeWidth: '4'}, { duration: 250 });
     })
         
     $('svg').on('click', function(){
@@ -130,6 +125,8 @@ $(document).ready( function(){
         // $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
         $('#detail_text').append('<p>' + text_dictionary[key(name)].body + '<p>');
         shown = true;
+        
+        setMaxHeight();
     })
     
     $('svg').on('mouseout', function(){
@@ -162,4 +159,12 @@ $(document).ready( function(){
                 
         }
     });
+    
+
 });
+
+var setMaxHeight = function (){
+    var maxHeight = $(window).height() / 1.5;
+    $('.carousel img').css('width', 'auto');
+    $('.carousel img').css('max-height', maxHeight);
+}

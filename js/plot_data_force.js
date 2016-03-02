@@ -43,6 +43,7 @@ var edges = svg.selectAll("path")
         .attr("id", function(d, i) {
             return d.name;
         })
+        .style('stroke-width', '4')
         .attr("class", function(d, i) {
             return d.source.type;
         });       

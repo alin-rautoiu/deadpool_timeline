@@ -38,7 +38,8 @@ var key = function(name){
         }
 }
 
-var deathstroke_deadpoolv1 = '<ol class="rslides carousel-indicators">'  
+var deathstroke_deadpoolv1 = 
+    '<ol class="rslides carousel-indicators">'  
         +'<li data-target="#detail_text" data-slide-to="0" class="active"></li>'  
         +'<li data-target="#detail_text" data-slide-to="1"></li>' 
         +'<li data-target="#detail_text" data-slide-to="2"></li>'
@@ -58,7 +59,7 @@ var spiderman_deadpoolv1 = '<ol class="rslides carousel-indicators">'
     +'</ol>' 
     
     +'<div class="carousel-inner" role="listbox">' 
-    + ' <div class="item active"> <img src="assets/spiderman.jpg" alt=""/><div class="carousel-caption"><h3>Spider-Man</h3><p>Beyond their similar masks and color,<b>Deadpool</b> wouldn\'t be what he\'s today without his banter during the fights.</p></div></div>'       
+    + ' <div class="item active"> <img src="assets/spiderman.jpg" alt=""/><div class="carousel-caption"><h3>Spider-Man</h3><p>Beyond their similar masks and color, <b>Deadpool</b> wouldn\'t be what he\'s today without his banter during the fights.</p></div></div>'       
     + '</div>';
 
 var wolverine_deadpoolv1 =
