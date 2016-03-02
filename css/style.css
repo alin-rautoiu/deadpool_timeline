@@ -8,6 +8,33 @@ path{
     width: 100%;
 }
 
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+    right: 0%;
+    left: 0%;
+    padding-bottom: 6%;
+    bottom:0%;
+}
+
+.carousel-indicators {
+    bottom: 3%;
+}
+
+/*.carousel img {
+    padding-bottom: 32%;
+}
+
+.carousel-caption{
+    background-color: gray;
+    right: 0%;
+    left: 0%;
+    padding-bottom: 1%;
+}
+
+.carousel-indicators {
+    bottom: 0px;
+}*/
+
 #title {
     margin-top: 6%;    
     margin-bottom: 4%;
@@ -28,14 +55,14 @@ path{
 }
 
 #drawing_area{
-    margin-top: 10%;    
+    margin-top: 6%;    
 }
 
 #detail_text{
-    background-color:grey; 
+    
     color: white;
-    padding: 5em 5em 5em 5em;
-    top:25vh;
+    /*padding: 3em 3em 3em 3em;*/
+    top: 15%;
 }
 
 #invisible{

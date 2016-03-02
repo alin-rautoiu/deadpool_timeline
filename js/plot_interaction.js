@@ -6,7 +6,7 @@ $(document).ready( function(){
         $("#detail_text").removeClass('affix');
     }
    
-    $('#detail_text').hide();
+    //$('#detail_text').hide();
     
     var isMouseDown = false;
     var isDragging = false;
@@ -43,8 +43,8 @@ $(document).ready( function(){
             }, 100);
         
         var name = $(this).parent().attr('id');
-        $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
-        $('#detail_text').append('<p>' + text_dictionary[key(name)].body + '<p>');
+        // $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
+        $('#detail_text').append(text_dictionary[key(name)].body);
         shown = true;       
     });
     
@@ -127,7 +127,7 @@ $(document).ready( function(){
             ,300
         );
         
-        $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
+        // $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
         $('#detail_text').append('<p>' + text_dictionary[key(name)].body + '<p>');
         shown = true;
     })
@@ -137,6 +137,13 @@ $(document).ready( function(){
                $('#' + d.name).css('stroke', '#ccc');
         });
     });
+    
+    $("#detail_text").on('click', function(d){
+        if(d.toElement.localName == 'li'){
+            $(".rslides li.active").toggleClass("active");
+            $(d.toElement).toggleClass("active");
+        }
+    })
     
     $(window).on('scroll', function(){
 

@@ -51,10 +51,13 @@ var gnodes = svg.selectAll("g.gnode")
         .data(dataset.nodes)
         .enter()
         .append("g")
-        .attr('type', "button")
-        .attr('data-toggle', "modal")
-        .attr('data-target', "#myModal")
-        .classed('gnode', true);
+        .classed('gnode', true)
+        .classed('deadpool', function(d){
+            return d.type == 'deadpool';
+        })
+        .classed('influence', function(d){
+            return d.type == 'influence';
+        });
      
 var dragstart = function(d){
     d3.select(this).classed("fixed", d.fixed = true);
@@ -80,7 +83,7 @@ var nodes = gnodes
                 .attr('height', drawing_size * 2);
             } else if (d.type == 'deadpool'){
                 g.append('circle')
-                .attr('r', drawing_size);
+                .attr('r', drawing_size)
             }
         })
         .attr("id", function(d, i) {
@@ -150,7 +153,7 @@ var last_depth;
                 d.__data__.source.x += (w / 2 - (last_depth * left_right * distance) - d.__data__.source.x) * k;
                 left_right += left_right == 0 ? 1 : 0;
             } else {
-                d.__data__.source.x += (w / 2 - d.__data__.source.x) * k;   
+                d.__data__.target.x += (w / 2 - d.__data__.target.x);   
             }
                              
     });
