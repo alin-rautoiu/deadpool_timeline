@@ -20,20 +20,9 @@ path{
     bottom: 3%;
 }
 
-/*.carousel img {
-    padding-bottom: 32%;
+.fake_column {
+    background-color: grey;
 }
-
-.carousel-caption{
-    background-color: gray;
-    right: 0%;
-    left: 0%;
-    padding-bottom: 1%;
-}
-
-.carousel-indicators {
-    bottom: 0px;
-}*/
 
 #title {
     margin-top: 6%;    
@@ -61,8 +50,8 @@ path{
 #detail_text{
     
     color: white;
-    /*padding: 3em 3em 3em 3em;*/
     top: 15%;
+    
 }
 
 #invisible{

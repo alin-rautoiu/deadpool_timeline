@@ -70,7 +70,7 @@ var wolverine_deadpoolv1 =
     
     +'<div class="carousel-inner" role="listbox">' 
     + ' <div class="item active"> <img src="assets/wolverine1.jpg" alt=""/><div class="carousel-caption"><h3>Wolverine</h3><p>Both <b>Deadpool</b> and <b>Wolverine</b> got their trademark abilities and mental derangements from the Weapon X program.</p></div></div>'
-    + ' <div class="item"> <img src="assets/wolverine2.jpg" alt=""/><div class="carousel-caption"><p>And from all the verious supergroups in Marvel Comics he\'s most closely associated with the X-Men over the years. Not surprising, having debuted in one of their books.</p></div></div>'       
+    + ' <div class="item"> <img src="assets/wolverine2.jpg" alt=""/><div class="carousel-caption"><p>And from all the various supergroups in Marvel Comics he\'s most closely associated with the X-Men over the years. Not surprising, having debuted in one of their books.</p></div></div>'       
     + '</div>' 
 
 var deadpoolv1 = "<b>Deadpool</b> was created by <b>Rob Liefeld</b>, making his first appearance in #98 of the New Mutants from 1991, written by <b>Fabian Nicieza</b>. He appeared as a synthesis of multiple chracters which interested <b>Liefeld</b> at the time resulting in a talkative mercenary, armed with swords, guns, an extraordinay healing factor coupled with an ugly mug and a defective teleportation belt. This is the version kept for different appearences and two miniseries, none of which remarked itself through humor or metatextuality, other than the main characters mean spirited pop-culture references from his dialogue, which were more of an warped verion of Spidey's trademark banter."

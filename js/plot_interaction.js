@@ -14,7 +14,6 @@ $(document).ready( function(){
         $("#detail_text").removeClass('affix');
     }
    
-    //$('#detail_text').hide();
     
     var isMouseDown = false;
     var isDragging = false;
@@ -31,27 +30,18 @@ $(document).ready( function(){
         $('#detail_text').empty();
         
         if (mobile === false){
-            $('#drawing_area').animate({
-                left: '-300px',}
-                ,300
+            $('#drawing_area').
+            velocity(
+                {left: '-300px'}
+                ,{duration: 300}
                 );
         }
         
-        $('#writing_area').animate({
-            opacity: '100',}
-            ,300
-        );
+        $('#writing_area').velocity({opacity: '100'}, {duration: 100});
         
-        $(this).siblings('text').animate({
-                top: 14
-            },{
-                step: function(top){
-                    $(this).css('font-size', top);
-                }  
-            }, 100);
+        $(this).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
         
         var name = $(this).parent().attr('id');
-        // $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
         $('#detail_text').append(text_dictionary[key(name)].body);
         shown = true;       
     });
@@ -82,13 +72,11 @@ $(document).ready( function(){
     
     $('path').on('mouseover', function(){
         if(!isDragging && $(this).hasClass('influence')){
-            //$(this).css('stroke', 'yellow');
-            $(this).velocity({strokeWidth: '6'}, { duration: 250 });
+            $(this).velocity({strokeWidth: '6'}, { duration: 250 });            
         }
     })
     
     $('path').on('mouseout', function(){
-        //$(this).css('stroke', '#ccc');
         $(this).velocity({strokeWidth: '4'}, { duration: 250 });
     })
         
@@ -96,13 +84,7 @@ $(document).ready( function(){
         if(isDragging){
             isDragging = false;
             isMouseDown = false;
-            $(draggedCircle).siblings('text').animate({
-                top: 14
-            },{
-                step: function(top){
-                    $(this).css('font-size', top);
-                }  
-            }, 250); 
+            $(draggedCircle).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
         }
     });   
     
@@ -116,25 +98,18 @@ $(document).ready( function(){
         }
         
         if (mobile === false){        
-            $('#drawing_area').animate({
-                left: '-300px',}
-                ,300
-                );
+            $('#drawing_area').velocity({left: '-300px'}, {duration: 300});
         }
         
-        $('#detail_text').show();
         $('#detail_text').empty();
         
-        $('#writing_area').animate({
-            opacity: '100',}
-            ,300
-        );
+        $('#writing_area').velocity({opacity: '100'}, {duration: 300});
         
-        // $('#detail_text').append('<h1>' + text_dictionary[key(name)].header + '<h1>');
         $('#detail_text').append('<p>' + text_dictionary[key(name)].body + '<p>');
+
         shown = true;
         
-        setMaxHeight();
+        setTimeout(setMaxHeight, 1);
     })
     
     $('svg').on('mouseout', function(){
@@ -154,25 +129,23 @@ $(document).ready( function(){
 
         if(shown && !mobile){
             
-            $('#drawing_area').animate({
-                left: '0px',}
-                ,300
-            );
-            $('#writing_area').animate({
-                opacity: '0',
-                }
-                ,300
-            );
+            $('#drawing_area').velocity({left: '0px'}, {duration: 300});
+            $('#writing_area').velocity({opacity: '0'}, {duration: 300});
             shown = false;
                 
         }
     });
     
+    $('#detail_text').on('slid.bs.carousel', function(){
+        setMaxHeight();
+    })
 
 });
 
 var setMaxHeight = function (){
-    var maxHeight = $(window).height() / 1.5;
-    $('.carousel img').css('width', 'auto');
-    $('.carousel img').css('max-height', maxHeight);
+    var windowHeight = $(window).height();
+    var imageHeight = $('.carousel').height();
+    var heightCorrection = (windowHeight - imageHeight) / 2;
+
+    $('.carousel').velocity({top: heightCorrection});
 }

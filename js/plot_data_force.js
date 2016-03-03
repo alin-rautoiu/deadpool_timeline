@@ -81,7 +81,10 @@ var nodes = gnodes
                 g.append('rect')
                 .attr('width', drawing_size * 2
                 )
-                .attr('height', drawing_size * 2);
+                .attr('height', drawing_size * 2)
+                .attr('rx', 15
+                )
+                .attr('ry', 15);
             } else if (d.type == 'deadpool'){
                 g.append('circle')
                 .attr('r', drawing_size)
