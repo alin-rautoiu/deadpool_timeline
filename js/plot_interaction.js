@@ -139,6 +139,13 @@ $(document).ready( function(){
     $('#detail_text').on('slid.bs.carousel', function(){
         setMaxHeight();
     })
+    
+    $("#detail_text").swiperight(function() {  
+      $("#detail_text").carousel('prev');  
+    });  
+   $("#detail_text").swipeleft(function() {  
+      $("#detail_text").carousel('next');  
+   });  
 
 });
 
