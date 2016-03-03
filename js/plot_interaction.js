@@ -118,7 +118,7 @@ $(document).ready( function(){
         });
     });
     
-    $("#detail_text").on('click', function(d){
+    $("#detail_text").on('click', function(d){        
         if(d.target.localName == 'li'){
             $(".rslides li.active").toggleClass("active");
             $(d.target).toggleClass("active");
