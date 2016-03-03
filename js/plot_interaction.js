@@ -1,4 +1,12 @@
 $(document).ready( function(){
+    
+     if (!String.prototype.includes) {
+     String.prototype.includes = function() {
+         'use strict';
+         return String.prototype.indexOf.apply(this, arguments) !== -1;
+     };
+}
+    
     var mobile = ($(window).width() < 800);;
     var shown = false;
     
@@ -136,9 +144,9 @@ $(document).ready( function(){
     });
     
     $("#detail_text").on('click', function(d){
-        if(d.toElement.localName == 'li'){
+        if(d.target.localName == 'li'){
             $(".rslides li.active").toggleClass("active");
-            $(d.toElement).toggleClass("active");
+            $(d.target).toggleClass("active");
         }
     })
     
