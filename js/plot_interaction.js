@@ -1,6 +1,7 @@
 var ballSizeNormal = 25;
 var ballSizeInflated = 28;
-
+var rectSize = 50;
+var rectSizeInflated = 56;
 
 $(document).ready( function(){
     
@@ -24,6 +25,8 @@ $(document).ready( function(){
         
         ballSizeNormal = 10;
         ballSizeInflated = 12;
+        rectSize = 20;
+        rectSizeInflated = 23;
     }
    
     
@@ -76,9 +79,47 @@ $(document).ready( function(){
         if(!isDragging){
             var r = $(this).attr('r');            
             
-            $(this).velocity({ r: ballSizeNormal}, { duration: 250 });
-            
+            $(this).velocity({ r: ballSizeNormal}, { duration: 250 });            
             $(this).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
+        }        
+    });
+    
+    /* */
+    
+    $('rect').on('mousemove', function(){
+        isDragging = isMouseDown && true;
+    });
+    
+    $('rect').on('mouseover', function(){
+        
+        $(this).velocity({ height: rectSizeInflated, width: rectSizeInflated}), { duration: 250 };               
+        $(this).siblings('text').velocity({ fontSize: "16px" }, { duration: 250 });
+        var name = $(this).parent().attr('id');
+        
+        if(!isDragging){
+            $('path').each(function(index, element) {
+                if($(element).attr('id').includes(name)){
+                    $(this).velocity({strokeWidth: '6'}, {delay:250, duration: 250 });
+                }
+            }, this);            
+        }
+
+    });
+    
+    $('rect').on('mouseout', function(){
+            if(!isDragging){
+                  
+            $(this).velocity({ height: rectSize, width: rectSize}), { duration: 250 };                   
+            $(this).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
+            var name = $(this).parent().attr('id');
+        
+            if(!isDragging){
+                $('path').each(function(index, element) {
+                    if($(element).attr('id').includes(name)){
+                        $(this).velocity({strokeWidth: '4'}, {delay:250, duration: 250 });
+                    }
+                }, this);            
+            }
         }        
     });
     
@@ -100,35 +141,29 @@ $(document).ready( function(){
         }
     });   
     
-    $('path').on('click', function(){       
+    $('path, rect').on('click', function(){       
         
-        var name = $(this).attr('id');
+        var name = $(this).attr('id') ? $(this).attr('id') : $(this).parent().attr('id');
         var source = name.split('_')[0];
         var target = name.split('_')[0];
         if(source.includes('deadpool') && target.includes('deadpool')){
             return;
         }
         
-        if (mobile === false){        
-            $('#drawing_area').velocity({left: '-300px'}, {duration: 300});
-        }
-        
         $('#detail_text').empty();
         
-        $('#writing_area').velocity({opacity: '100'}, {duration: 300});
+        if (mobile === false){        
+            $('#drawing_area').velocity({left: '-300px'}, {duration: 300});
+        }       
         
+        $('#writing_area').velocity({opacity: '100'}, {duration: 300});        
         $('#detail_text').append(text_dictionary[key(name)].body);
 
         shown = true;
         
-        setTimeout(setMaxHeight, 10);
+        setMaxHeight();
     })
-    
-    $('svg').on('mouseout', function(){
-        dataset.edges.forEach(function(d){
-               $('#' + d.name).css('stroke', '#ccc');
-        });
-    });
+   
     
     $("#detail_text").on('click', function(d){        
         if(d.target.localName == 'li'){
@@ -163,9 +198,14 @@ $(document).ready( function(){
 });
 
 var setMaxHeight = function (){
-    var windowHeight = $(window).height();
+    
     var imageHeight = $('.carousel').height();
-    var heightCorrection = (windowHeight - imageHeight) / 2;
-
-    $('.carousel').velocity({top: heightCorrection});
+    
+    if(imageHeight == 0){
+        setTimeout(setMaxHeight, 50);
+    } else {        
+        var windowHeight = $(window).height();
+        var heightCorrection = (windowHeight - imageHeight) / 2;
+        $('.carousel').velocity({top: heightCorrection});
+    }
 }

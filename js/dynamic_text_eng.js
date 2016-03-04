@@ -1,20 +1,21 @@
 var key = function(name){
-    switch (name) {
-            case 'spiderman_deadpoolv1':
+    var source = name.split('_')[0];
+    switch (source) {
+            case 'spiderman':
                 return 0;
             break;
-            case 'deathstroke_deadpoolv1':
+            case 'deathstroke':
               return 1;
             break;
-            case 'wolverine_deadpoolv1':
+            case 'wolverine':
               return 2;
-            case 'animalman_deadpoolv2':
+            case 'animalman':
                 return 3;
                 break;
-            case 'shehulk_deadpoolv25':
+            case 'shehulk':
                 return 4;
             break;
-            case 'ambushbug_deadpoolv3':
+            case 'ambushbug':
                return 5;
             break;
             case 'deadpoolv1':
@@ -38,46 +39,105 @@ var key = function(name){
         }
 }
 
-var deathstroke_deadpoolv1 = 
-    '<ol class="rslides carousel-indicators">'  
-        +'<li data-target="#detail_text" data-slide-to="0" class="active"></li>'  
-        +'<li data-target="#detail_text" data-slide-to="1"></li>' 
-        +'<li data-target="#detail_text" data-slide-to="2"></li>'
-    +'</ol>' 
-    
-    +'<div class="carousel-inner" role="listbox">' 
-    + ' <div class="item active"> <img src="assets/deathstroke.jpg" alt=""/><div class="carousel-caption"><h3>Deathstroke</h3><p><b>Deadpool\'s</b> main mold is <b>Deathstroke the Terminator</b>, The New Teen Titans villain.</p></div></div>' 
-    
-    + '<div class="item"><img src="assets/deathstroke2.jpg" alt=""/><div class="carousel-caption"><p>Going beyond the similar costumes and names, <b>Deathstroke</b> is also a merciless mercenary who uses a varied arsenal counting explosives, swords, firearms and his own healing factor.</p> </div> </div>'
-    
-    + '<div class="item"><img src="assets/deathstroke3.jpg" alt=""/><div class="carousel-caption"><p>On the other hand, <b>Deathstroke</b> is more sober and never went cuckoo in the head. As <b>Joe Kelly</b> and <b>Ed McGuinness</b> later demonstred in <b>Superman/Man Annual #1</b> when they created an alternate version of <b>Deathstroke</b> closely resembling their <b>Deadpool</b>.</p></div></div>'
-       
-    + '</div>';
+var createCarouselText = function(stringArray){
+    var carouselText = "";
+    if(stringArray.length == 1){
+        carouselText += 
+        '<ol class="rslides carousel-indicators">'  
+            +'<li data-target="#detail_text" data-slide-to="0" style="visibility:hidden" class="active"></li>'  
+        +'</ol>'
+        +'<div class="carousel-inner" role="listbox">' 
+            + ' <div class="item active"> <img src="' + stringArray[0].img + '"alt=""/><div class="carousel-caption"><h3>'+      stringArray[0].header + '</h3><p>'+ stringArray[0].text + '</p></div></div>'       
+        + '</div>';
+    } else {
+        carouselText += '<ol class="rslides carousel-indicators">' 
+        for(var i = 0; i < stringArray.length; i++){
+            carouselText +=( '<li data-target="#detail_text" data-slide-to="' + i + '"class="' + (i == 0 ? 'active' : "") + '"></li>' )
+        } 
+            carouselText +='</ol><div class="carousel-inner" role="listbox">';
+            
+        for(var i = 0; i < stringArray.length; i++){            
+            carouselText += ('<div class="item ' + (i == 0 ? ' active' : "") +  '"> <img src="' + stringArray[i].img + '"alt=""/><div class="carousel-caption">'          + (i == 0 ? '<h3>'+ stringArray[0].header + '</h3>' : "") + '<p>'+ stringArray[i].text + '</p></div></div>');
+        }
+         carouselText +='</div>';
+    }
+    return carouselText;
+}
 
-var spiderman_deadpoolv1 = '<ol class="rslides carousel-indicators">'  
-        +'<li data-target="#detail_text" data-slide-to="0" style="visibility:hidden" class="active"></li>'  
-    +'</ol>' 
-    
-    +'<div class="carousel-inner" role="listbox">' 
-    + ' <div class="item active"> <img src="assets/spiderman.jpg" alt=""/><div class="carousel-caption"><h3>Spider-Man</h3><p>Beyond their similar masks and color, <b>Deadpool</b> wouldn\'t be what he\'s today without his banter during the fights.</p></div></div>'       
-    + '</div>';
+var deathstrokeArray = [
+    {img: 'assets/deathstroke.jpg',
+    header: 'Deathstroke the Terminator',
+    text: '<b>Deadpool\'s</b> main mold is <b>Deathstroke the Terminator</b>, The New Teen Titans villain.'},
+    {img: 'assets/deathstroke2.jpg',
+    header: '',
+    text: 'Going beyond the similar costumes and names, <b>Deathstroke</b> is also a merciless mercenary who uses a varied arsenal counting explosives, swords, firearms and his own healing factor.'},
+    {img: 'assets/deathstroke3.jpg',
+    header: '',
+    text: 'On the other hand, <b>Deathstroke</b> is more sober and never went cuckoo in the head. As <b>Joe Kelly</b> and <b>Ed McGuinness</b> later demonstred in <b>Superman/Man Annual #1</b> when they created an alternate version of <b>Deathstroke</b> closely resembling their <b>Deadpool</b>.'}
+];
 
-var wolverine_deadpoolv1 =
-    '<ol class="rslides carousel-indicators">'  
-        +'<li data-target="#detail_text" data-slide-to="0" class="active"></li>'
-        +'<li data-target="#detail_text" data-slide-to="1"></li>'  
-    +'</ol>' 
-    
-    +'<div class="carousel-inner" role="listbox">' 
-    + ' <div class="item active"> <img src="assets/wolverine1.jpg" alt=""/><div class="carousel-caption"><h3>Wolverine</h3><p>Both <b>Deadpool</b> and <b>Wolverine</b> got their trademark abilities and mental derangements from the Weapon X program.</p></div></div>'
-    + ' <div class="item"> <img src="assets/wolverine2.jpg" alt=""/><div class="carousel-caption"><p>And from all the various supergroups in Marvel Comics he\'s most closely associated with the X-Men over the years. Not surprising, having debuted in one of their books.</p></div></div>'       
-    + '</div>' 
+var deathstroke_deadpoolv1 = createCarouselText(deathstrokeArray);
 
-var deadpoolv1 = "<b>Deadpool</b> was created by <b>Rob Liefeld</b>, making his first appearance in #98 of the New Mutants from 1991, written by <b>Fabian Nicieza</b>. He appeared as a synthesis of multiple chracters which interested <b>Liefeld</b> at the time resulting in a talkative mercenary, armed with swords, guns, an extraordinay healing factor coupled with an ugly mug and a defective teleportation belt. This is the version kept for different appearences and two miniseries, none of which remarked itself through humor or metatextuality, other than the main characters mean spirited pop-culture references from his dialogue, which were more of an warped verion of Spidey's trademark banter."
+var spidermanArray = [
+    {img: 'assets/spiderman.jpg',
+    header: 'Spider-Man',
+    text: 'Beyond their similar masks and color, <b>Deadpool</b> wouldn\'t be what he\'s today without his banter during the fights.'},
+];
 
-var animalman_deadpoolv2 = "In <b>Animal Man</b>, <b>Grant Morrison</b> took a minor character, using him to comment on the nature of superhero stories. There are numerous antecendets for this, but the metafictional play with comics' language, which could for the most part still be explained by the stories metaphysics or by the character's altered mental state, opened the gates for the kind of comic <b>Deadpool</b> would become.";
+var spiderman_deadpoolv1 = createCarouselText(spidermanArray);
 
-var deadpoolv2 = "Under <b>Joe Kelly</b> and <b>Ed McGuinness</b> the comi becomes humorous in nature, without becoming a full-un comedy, placing it's character in the place of a reluctant hero, with often fits of violence. To counterpoint <b>Deadpool's</b> insanity, the authors grow around him a recurring cast of characters who present him with moral dillemas. They also introduce a slightly more self-aware narration from Wade's point of view and punctual plays with the comics's language, such as in issues 11, where <b>Deadpool</b> and <b>Blind Al</b> are transported back in time and drew in the style <b>John Romita Jr.</b> would have used to drew his issues of <b>The Amazing Spider-Man</b> that would have happened at the time. It's worth noting that at the around the same time, <b>Garth Ennis</b> and <b>John McCrea</b> were taking a similar route at <b>DC</b> with <b>Hitman</b>.";
+var wolverineArray = [
+    {img: 'assets/wolverine1.jpg',
+    header: 'Wolverine',
+    text: 'Wolverine</b> got their trademark abilities and mental derangements from the Weapon X program.'},
+    {img: 'assets/wolverine2.jpg',
+    header: '',
+    text: 'And from all the various supergroups in Marvel Comics he\'s most closely associated with the X-Men over the years. Not surprising, having debuted in one of their books.'}
+];
+
+var wolverine_deadpoolv1 = createCarouselText(wolverineArray);    
+
+var deadpoolv1Array = [
+    {img: 'assets/wolverine1.jpg',
+    header: 'Deadpool - phase 1',
+    text: '<b>Deadpool</b> was created by <b>Rob Liefeld</b>, making his first appearance in #98 of the New Mutants from 1991, written by <b>Fabian Nicieza</b>.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'He appeared as a synthesis of multiple chracters which interested <b>Liefeld</b> at the time resulting in a talkative mercenary, armed with swords, guns, an extraordinay healing factor coupled with an ugly mug and a defective teleportation belt.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'This is the version kept for different appearences and two miniseries, none of which remarked itself through humor or metatextuality, other than the main characters mean spirited pop-culture references from his dialogue, which were more of an warped verion of Spidey\'s trademark banter.'}
+];
+
+var deadpoolv1 = createCarouselText(deadpoolv1Array);   
+
+var animalmanArray = [
+    {img: 'assets/wolverine1.jpg',
+    header: 'Animal Man',
+    text: 'In <b>Animal Man</b>, <b>Grant Morrison</b> took a minor character, using him to comment on the nature of superhero stories.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'There are numerous antecendets for this, but the metafictional play with comics\' language, which could for the most part still be explained by the stories metaphysics or by the character\'s altered mental state, opened the gates for the kind of comic <b>Deadpool</b> would become.'}
+];
+
+var animalman_deadpoolv2 = createCarouselText(animalmanArray);
+
+var deadpoolv2Array = [
+    {img: 'assets/wolverine1.jpg',
+    header: 'Deadpool - phase 2',
+    text: 'Under <b>Joe Kelly</b> and <b>Ed McGuinness</b> the comic becomes humorous in nature, without becoming a full-on comedy, placing it\'s character in the place of a reluctant hero, with often fits of violence.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'To counterpoint <b>Deadpool\'s</b> insanity, the authors grow around him a recurring cast of characters who present him with moral dillemas.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'They also introduce a slightly more self-aware narration from Wade\'s point of view and punctual plays with the comics\'s language, such as in issues 11, where <b>Deadpool</b> and <b>Blind Al</b> are transported back in time and drew in the style <b>John Romita Jr.</b> would have used to drew his issues of <b>The Amazing Spider-Man</b> that would have happened at the time.'},
+    {img: 'assets/wolverine1.jpg',
+    header: '',
+    text: 'It\'s worth noting that at the around the same time, <b>Garth Ennis</b> and <b>John McCrea</b> were taking a similar route at <b>DC</b> with <b>Hitman</b>.'}
+];
+
+var deadpoolv2 = createCarouselText(deadpoolv2Array);;
 
 var shehulk_deadpoolv25 = "Before <b>Deadpool</b>, there was <b>She-Hulk</b>. <b>The Sensational She-Hulk</b> by </b>John Byrne</b>, to be more exact. <b>She-Hulk</b>, especially on covers, but from time to time also inside the stories, would break the fourth wall comment about the relationship between her, her authors, the type of stories she appered in, the title's (lack of) success and the techniques neccesary to maintain it.";
 

@@ -4,6 +4,11 @@ path{
     fill:none;
 }
 
+p {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 1.2em;
+}
+
 .row{
     width: 100%;
 }
@@ -14,6 +19,11 @@ path{
     left: 0%;
     padding-bottom: 6%;
     bottom:0%;
+}
+
+.carousel-caption p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
 }
 
 .carousel-indicators {
@@ -27,7 +37,7 @@ path{
 #title {
     margin-top: 6%;    
     margin-bottom: 4%;
-    margin-left: 1%;
+    margin-left: 1%;    
 }
 
 #title p{
