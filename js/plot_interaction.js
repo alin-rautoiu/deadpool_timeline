@@ -105,11 +105,11 @@ $(document).ready( function(){
         
         $('#writing_area').velocity({opacity: '100'}, {duration: 300});
         
-        $('#detail_text').append('<p>' + text_dictionary[key(name)].body + '<p>');
+        $('#detail_text').append(text_dictionary[key(name)].body);
 
         shown = true;
         
-        setTimeout(setMaxHeight, 1);
+        setTimeout(setMaxHeight, 10);
     })
     
     $('svg').on('mouseout', function(){
