@@ -1,3 +1,7 @@
+var ballSizeNormal = 25;
+var ballSizeInflated = 28;
+
+
 $(document).ready( function(){
     
      if (!String.prototype.includes) {
@@ -12,6 +16,14 @@ $(document).ready( function(){
     
     if (mobile === true){
         $("#detail_text").removeClass('affix');
+        $('#writing_area').css('margin-left', '0px');
+        $('#writing_area').css('margin-right', '0px');
+        $('#writing_area').css('padding-left', '0px');
+        $('#writing_area').css('padding-right', '0px');
+        $('#writing_area').css('width', '100vw');
+        
+        ballSizeNormal = 10;
+        ballSizeInflated = 12;
     }
    
     
@@ -54,7 +66,7 @@ $(document).ready( function(){
         var r = $(this).attr('r');
         var name = $(this).attr('id');
         
-        $(this).velocity({ r: 28}), { duration: 250 };
+        $(this).velocity({ r: ballSizeInflated}), { duration: 250 };
                 
         $(this).siblings('text').velocity({ fontSize: "16px" }, { duration: 250 });
 
@@ -64,7 +76,7 @@ $(document).ready( function(){
         if(!isDragging){
             var r = $(this).attr('r');            
             
-            $(this).velocity({ r: 25}, { duration: 250 });
+            $(this).velocity({ r: ballSizeNormal}, { duration: 250 });
             
             $(this).siblings('text').velocity({ fontSize: "14px" }, { duration: 250 });
         }        
@@ -127,8 +139,7 @@ $(document).ready( function(){
     
     $(window).on('scroll', function(){
 
-        if(shown && !mobile){
-            
+        if(shown && !mobile){            
             $('#drawing_area').velocity({left: '0px'}, {duration: 300});
             $('#writing_area').velocity({opacity: '0'}, {duration: 300});
             shown = false;
@@ -140,12 +151,14 @@ $(document).ready( function(){
         setMaxHeight();
     })
     
+    if(mobile){
     $("#detail_text").swiperight(function() {  
-      $("#detail_text").carousel('prev');  
+        $("#detail_text").carousel('prev');        
     });  
-   $("#detail_text").swipeleft(function() {  
-      $("#detail_text").carousel('next');  
-   });  
+    $("#detail_text").swipeleft(function() {  
+        $("#detail_text").carousel('next');  
+    });  
+   }
 
 });
 

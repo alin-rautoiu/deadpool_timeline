@@ -1,4 +1,4 @@
-var w = $(window).width() > 1200 ? $(window).width() * 2 / 3 : $(window).width();
+var w = $(window).width() > 1200 ? $(window).width() * 2 / 3 : $(window).width() - 20;
 var h = $(window).height() - 25;
 var mobile = ($(window).width() < 800);
 var drawing_size = mobile ? 10 : 25;
