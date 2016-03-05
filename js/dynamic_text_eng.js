@@ -186,7 +186,25 @@ var deadpoolv3Array = [
 
 var deadpoolv3 = createCarouselText(deadpoolv3Array);
 
-var deadpoolv4 = 'Up to this point, the moments when Deadpool broke the Fourth Wall were sufficiently limited in scope or could be explained well enough by circumstances in the story to avoid breaking the suspension of disbelief. But since precisley these aspects were perpetuated through the Internet and fueled the character\'s popularity, contemporany Deadpool media is intentionally going for these almost brechtian moments of alienation';
+var deadpoolv4Array = [
+    {img: 'assets/deadpoolv41.jpg',
+    header: 'Deadpool - phase 4',
+    text: 'Up to this point, the moments when Deadpool broke the Fourth Wall were sufficiently limited in scope or could be explained well enough by circumstances, that they could avoid breaking the suspension of disbelief.'},
+    {img: 'assets/deadpoolv42.jpg',
+    header: '',
+    text: 'Breaking the fourth wall, metafiction, self-referential dialogue and narration, absurd moments, aren\'t just for humour anymore.'},
+    {img: 'assets/deadpoolv43.png',
+    header: '',
+    text: ' Or for humour at all, in some cases.'},
+    {img: 'assets/deadpoolv44.jpg',
+    header: '',
+    text: 'That\'s because precisley these aspects were perpetuated through the Internet and fueled the character\'s popularity, contemporany Deadpool media is intentionally going for these almost brechtian moments of alienation.'},
+    {img: 'assets/deadpoolv45.jpg',
+    header: '',
+    text: 'The difference can be subtle and the result varies from series to series, but the current Deadpool has all the characteristics he had before, only reshuffled without the context from which they initially spurred.'} 
+];
+
+var deadpoolv4 = createCarouselText(deadpoolv4Array);
 
 var text_dictionary = [
     {header: 'The Amazing Spider-Man', body: spiderman_deadpoolv1},
