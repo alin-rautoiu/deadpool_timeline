@@ -21,13 +21,29 @@ p {
     bottom:0%;
 }
 
+.carousel-caption:hover{
+    background: rgba(0,0,0,0.7);
+    right: 0%;
+    left: 0%;
+    padding-bottom: 6%;
+    bottom:0%;
+}
+
 .carousel-caption p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1em;
 }
 
-.carousel-indicators {
-    bottom: 3%;
+.carousel-indicators{
+    bottom: 3%;;
+}
+
+.carousel-indicators:hover ~ .carousel-inner > .item.active > .carousel-caption {
+    background: rgba(0,0,0,0.7);
+}
+
+img:hover + .carousel-caption {
+    visibility: hidden;
 }
 
 .fake_column {
