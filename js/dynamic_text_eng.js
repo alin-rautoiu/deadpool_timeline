@@ -106,7 +106,7 @@ var deadpoolv1Array = [
     text: 'He was as a synthesis of multiple characters that interested <b>Liefeld</b> at the time, resulting in a talkative mercenary, armed with swords, guns, an extraordinay healing factor coupled with an ugly mug and a defective teleportation belt. Over time Nicieza developed these traits into a character.'},
     {img: 'assets/deadpoolv13.jpg',
     header: '',
-    text: 'This is the way he was presented in different appearences and two miniseries, none of which remarked itself through humor or metatextuality, other than the main characters mean spirited pop-culture references from his dialogue, which were more of an warped version of Spidey\'s trademark banter.'}
+    text: 'This is the way he was presented in different appearences and two miniseries, none of which remarked itself through humor or metatextuality, other than the main character\'s mean spirited pop-culture references, which were more of an warped version of Spidey\'s trademark banter.'}
 ];
 
 var deadpoolv1 = createCarouselText(deadpoolv1Array);   
