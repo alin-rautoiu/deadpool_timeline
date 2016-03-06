@@ -52,6 +52,14 @@ img:hover + .carousel-caption {
     background-color: grey;
 }
 
+.mobile_writing_area {
+        margin-left: '0px';
+        margin-right: '0px';
+        padding-left: '0px';
+        padding-right: '0px';
+        width: '100vw';
+}
+
 #title {
     margin-top: 6%;    
     margin-bottom: 4%;
@@ -88,6 +96,6 @@ img:hover + .carousel-caption {
     visibility: hidden;
 }
 
-#deadpoolv4_invisible{
+#deadpoolv5_invisible{
     visibility: hidden;
 }
