@@ -131,7 +131,7 @@ var deadpoolv2Array = [
     text: 'To counterpoint <b>Deadpool\'s</b> insanity, the authors surrounded him with a recurring cast of characters, presenting him moral dilemmas.'},
     {img: 'assets/deadpoolv25.jpg',
     header: '',
-    text: 'They gave Wade a more self-aware voice, enriched his repertoir of joke and tried to pound some depth into the mercenary through the dysfunctional relationships he had with other characters.'},
+    text: 'They gave Wade a more self-aware voice, enriched his repertoir of jokes and tried to pound some depth into the mercenary through the dysfunctional relationships he had with other characters.'},
     {img: 'assets/deadpoolv23.jpg',
     header: '',
     text: 'Also, punctual plays with comics\'s language, such as in #11, where <b>Deadpool</b> and <b>Blind Al</b> are transported back in time and drawn in the style <b>John Romita Jr.</b> would have used to draw his issues of <b>The Amazing Spider-Man</b> when the action takes place.'},
