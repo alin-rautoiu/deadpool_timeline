@@ -19,79 +19,79 @@ if (!String.prototype.includes) {
 
 function preloader() {
 	if (document.images) {
-		var deathstroke = new Image();
-		var deathstroke2 = new Image();
-		var deathstroke3 = new Image();
-        var spiderman = new Image();
-        var wolverine1 = new Image();
-        var wolverine2 = new Image();
-        var deadpoolv11 = new Image();
-        var deadpoolv12 = new Image();
-        var deadpoolv13 = new Image();
-        var animalman1 = new Image();
-        var animalman2 = new Image();
-        
-        var deadpoolv21 = new Image();
-        var deadpoolv22 = new Image();
-        var deadpoolv25 = new Image();
-        var deadpoolv23 = new Image();
-        var deadpoolv24 = new Image();
-        
-        var shehulk1 = new Image();
-        var shehulk2 = new Image();
-        
-        var deadpoolv251 = new Image();
-        var deadpoolv252 = new Image();
-        
-        var ambushbug = new Image();
-        
-        var deadpoolv31 = new Image();
-        var deadpoolv32 = new Image();
-        var deadpoolv33 = new Image();
-        var deadpoolv34 = new Image();
-        
-        var deadpoolv41 = new Image();
-        var deadpoolv42 = new Image();
-        var deadpoolv43 = new Image();
-        var deadpoolv44 = new Image();
-        var deadpoolv45 = new Image();        
-
-		deathstroke.src = "assets/deathstroke.jpg";
-		deathstroke2.src = "assets/deathstroke2.jpg";
-		deathstroke3.src = "assets/deathstroke3.jpg";
-        spiderman.src = "assets/spiderman.jpg";
-        wolverine1.src = "assets/wolverine1.jpg";
-        wolverine2.src = "assets/wolverine2.jpg";
-        deadpoolv11.src = "assets/deadpoolv11.jpg";
-        deadpoolv12.src = "assets/deadpoolv12.jpg";
-        deadpoolv13.src = "assets/deadpoolv13.jpg";
-        animalman1.src = "assets/animalman1.jpg";
-        animalman2.src = "assets/animalman2.jpg";
-        
-        deadpoolv21.src = "assets/deadpoolv21.jpg";
-        deadpoolv22.src = "assets/deadpoolv22.jpg";
-        deadpoolv25.src = "assets/deadpoolv25.jpg";
-        deadpoolv23.src = "assets/deadpoolv23.jpg";
-        deadpoolv24.src = "assets/deadpoolv24.jpg";
-        
-        shehulk1.src = "assets/shehulk1.jpg";
-        shehulk2.src = "assets/shehulk2.jpg";
-        
-        deadpoolv251.src = "assets/deadpoolv251.jpg";
-        deadpoolv252.src = "assets/deadpoolv252.jpg";
-        
-        ambushbug.src = "assets/ambushbug.jpg";
-        
-        deadpoolv31.src = "assets/deadpoolv31.jpg";
-        deadpoolv32.src = "assets/deadpoolv32.jpg";
-        deadpoolv33.src = "assets/deadpoolv33.jpg";
-        deadpoolv34.src = "assets/deadpoolv34.jpg";
-        
-        deadpoolv41.src = "assets/deadpoolv41.jpg";
-        deadpoolv42.src = "assets/deadpoolv42.jpg";
-        deadpoolv43.src = "assets/deadpoolv43.jpg";
-        deadpoolv44.src = "assets/deadpoolv44.jpg";
-        deadpoolv45.src = "assets/deadpoolv45.jpg";
+// 		var deathstroke = new Image();
+// 		var deathstroke2 = new Image();
+// 		var deathstroke3 = new Image();
+//         var spiderman = new Image();
+//         var wolverine1 = new Image();
+//         var wolverine2 = new Image();
+//         var deadpoolv11 = new Image();
+//         var deadpoolv12 = new Image();
+//         var deadpoolv13 = new Image();
+//         var animalman1 = new Image();
+//         var animalman2 = new Image();
+//         
+//         var deadpoolv21 = new Image();
+//         var deadpoolv22 = new Image();
+//         var deadpoolv25 = new Image();
+//         var deadpoolv23 = new Image();
+//         var deadpoolv24 = new Image();
+//         
+//         var shehulk1 = new Image();
+//         var shehulk2 = new Image();
+//         
+//         var deadpoolv251 = new Image();
+//         var deadpoolv252 = new Image();
+//         
+//         var ambushbug = new Image();
+//         
+//         var deadpoolv31 = new Image();
+//         var deadpoolv32 = new Image();
+//         var deadpoolv33 = new Image();
+//         var deadpoolv34 = new Image();
+//         
+//         var deadpoolv41 = new Image();
+//         var deadpoolv42 = new Image();
+//         var deadpoolv43 = new Image();
+//         var deadpoolv44 = new Image();
+//         var deadpoolv45 = new Image();        
+// 
+// 		deathstroke.src = "assets/deathstroke.jpg";
+// 		deathstroke2.src = "assets/deathstroke2.jpg";
+// 		deathstroke3.src = "assets/deathstroke3.jpg";
+//         spiderman.src = "assets/spiderman.jpg";
+//         wolverine1.src = "assets/wolverine1.jpg";
+//         wolverine2.src = "assets/wolverine2.jpg";
+//         deadpoolv11.src = "assets/deadpoolv11.jpg";
+//         deadpoolv12.src = "assets/deadpoolv12.jpg";
+//         deadpoolv13.src = "assets/deadpoolv13.jpg";
+//         animalman1.src = "assets/animalman1.jpg";
+//         animalman2.src = "assets/animalman2.jpg";
+//         
+//         deadpoolv21.src = "assets/deadpoolv21.jpg";
+//         deadpoolv22.src = "assets/deadpoolv22.jpg";
+//         deadpoolv25.src = "assets/deadpoolv25.jpg";
+//         deadpoolv23.src = "assets/deadpoolv23.jpg";
+//         deadpoolv24.src = "assets/deadpoolv24.jpg";
+//         
+//         shehulk1.src = "assets/shehulk1.jpg";
+//         shehulk2.src = "assets/shehulk2.jpg";
+//         
+//         deadpoolv251.src = "assets/deadpoolv251.jpg";
+//         deadpoolv252.src = "assets/deadpoolv252.jpg";
+//         
+//         ambushbug.src = "assets/ambushbug.jpg";
+//         
+//         deadpoolv31.src = "assets/deadpoolv31.jpg";
+//         deadpoolv32.src = "assets/deadpoolv32.jpg";
+//         deadpoolv33.src = "assets/deadpoolv33.jpg";
+//         deadpoolv34.src = "assets/deadpoolv34.jpg";
+//         
+//         deadpoolv41.src = "assets/deadpoolv41.jpg";
+//         deadpoolv42.src = "assets/deadpoolv42.jpg";
+//         deadpoolv43.src = "assets/deadpoolv43.jpg";
+//         deadpoolv44.src = "assets/deadpoolv44.jpg";
+//         deadpoolv45.src = "assets/deadpoolv45.jpg";
 	}
 }
 function addLoadEvent(func) {
