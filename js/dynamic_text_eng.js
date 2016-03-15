@@ -174,7 +174,7 @@ var ambushbug_deadpoolv3 = createCarouselText(ambushbugArray);
 
 var deadpoolv3Array = [
     {img: 'assets/deadpoolv31.jpg',
-    header: 'Deadpool - phase 3',
+    header: 'Deadpool - phase 4',
     text: 'Under <b>Daniel Way</b> the title becomes farcical in nature.'},
     {img: 'assets/deadpoolv32.jpg',
     header: '',
@@ -191,7 +191,7 @@ var deadpoolv3 = createCarouselText(deadpoolv3Array);
 
 var deadpoolv4Array = [
     {img: 'assets/deadpoolv41.jpg',
-    header: 'Deadpool - phase 4',
+    header: 'Deadpool - Now',
     text: 'Up to this point, the moments when Deadpool broke the Fourth Wall were sufficiently limited in scope or could be explained well enough by circumstances, that they could avoid breaking the suspension of disbelief.'},
     {img: 'assets/deadpoolv42.jpg',
     header: '',
