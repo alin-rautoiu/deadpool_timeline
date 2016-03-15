@@ -67,7 +67,7 @@ var createCarouselText = function(stringArray){
 var deathstrokeArray = [
     {img: 'assets/deathstroke.jpg',
     header: 'Deathstroke the Terminator',
-    text: '<b>Deadpool\'s</b> main mold is <b>Deathstroke the Terminator</b>, The New Teen Titans villain.'},
+    text: '<b>Deadpool\'s</b> main mold is <b>Deathstroke the Terminator</b>, The New Teen Titans\' villain.'},
     {img: 'assets/deathstroke2.jpg',
     header: '',
     text: 'Going beyond the similar costumes and names, just like <b>Deadpool</b>, <b>Deathstroke</b> is merciless mercenary who uses a varied arsenal consisting of, but not limited to, explosives, swords, firearms and his own healing factor.'},
@@ -92,7 +92,7 @@ var wolverineArray = [
     text: 'Both Deadpool and Wolverine</b> got their trademark abilities and mental derangements from the Weapon X program.'},
     {img: 'assets/wolverine2.jpg',
     header: '',
-    text: 'And from all the various supergroups in Marvel Comics he\'s been most closely associated with the X-Men over the years. Not surprising, having debuted in one of their books.'}
+    text: 'And from all the various supergroups in Marvel Comics he\'s been most closely associated with the X-Men over the years. Not surprisingly, having debuted in one of their books.'}
 ];
 
 var wolverine_deadpoolv1 = createCarouselText(wolverineArray);    
@@ -128,16 +128,16 @@ var deadpoolv2Array = [
     text: 'Under <b>Joe Kelly</b> and <b>Ed McGuinness</b> the comic turns humorous in nature, without becoming a full-on comedy, placing it\'s character in the place of a reluctant hero, with often fits of violence.'},
     {img: 'assets/deadpoolv22.jpg',
     header: '',
-    text: 'To counterpoint <b>Deadpool\'s</b> insanity, the authors surrounded him with a recurring cast of characters, presenting him moral dilemmas.'},
+    text: 'To counterpoint <b>Deadpool\'s</b> insanity, the authors surrounded him with a recurring cast of characters, presenting him with moral dilemmas.'},
     {img: 'assets/deadpoolv25.jpg',
     header: '',
-    text: 'They gave Wade a more self-aware voice, enriched his repertoir of jokes and tried to pound some depth into the mercenary through the dysfunctional relationships he had with other characters.'},
+    text: 'They gave Wade a more self-aware voice, enriched his repertoir of jokes and tried to pound some depth into the mercenary through the dysfunctional relationships he had with those around him.'},
     {img: 'assets/deadpoolv23.jpg',
     header: '',
     text: 'Also, punctual plays with comics\'s language, such as in #11, where <b>Deadpool</b> and <b>Blind Al</b> are transported back in time and drawn in the style <b>John Romita Jr.</b> would have used to draw his issues of <b>The Amazing Spider-Man</b> when the action takes place.'},
     {img: 'assets/deadpoolv24.jpg',
     header: '',
-    text: 'It\'s worth noting that at the around the same time, <b>Garth Ennis</b> and <b>John McCrea</b> were taking a similar route at <b>DC</b> with <b>Hitman</b>, so certainly there was something in the air.'}
+    text: 'It\'s worth noting that at around the same time, <b>Garth Ennis</b> and <b>John McCrea</b> were taking a similar route at <b>DC</b> with <b>Hitman</b>, so certainly there was something in the air.'}
 ];
 
 var deadpoolv2 = createCarouselText(deadpoolv2Array);;
@@ -148,7 +148,7 @@ var shehulkArray = [
     text: 'Before <b>Deadpool</b>, there was <b>She-Hulk</b>. <b>The Sensational She-Hulk</b> by </b>John Byrne</b>, to be more exact. '},
     {img: 'assets/shehulk2.jpg',
     header: '',
-    text: 'Wspecially on covers, but from time to time also inside the stories, <b>She-Hulk</b> would break the fourth wall to comment on the relationship between her, her authors, the type of stories she appered in, the title\'s (lack of) success and the techniques neccesary to maintain it.'}    
+    text: 'Especially on covers, but from time to time also inside the stories, <b>She-Hulk</b> would break the fourth wall to comment on the relationship between her, her authors, the type of stories she appered in, the title\'s (lack of) success and the techniques neccesary to maintain it. The strongest examples of this happened in dreams, an artifice also used by Christopher Priest.'}    
 ];
 
 var shehulk_deadpoolv25 = createCarouselText(shehulkArray);
@@ -159,7 +159,7 @@ var deadpoolv25Array = [
     text: 'A moment usually ignored in <b>Deadpool\'s</b> chronology is <b>Christopher Priest\'s</b> run on the title. <b>Priest</b> took the elements of satire, humor, metafiction and ran with them.'},
     {img: 'assets/deadpoolv252.png',
     header: '',
-    text: 'Most striking of all is a village that Wade hallucinates where he meets all the characters written up to that point by <b>Priest</b>, whose series were canceled. <b>Priest\'s</b> take on the character is prescient, being the closest we\'ve had to the current approach.'}    
+    text: 'Most striking of all is a village that Wade hallucinates where he meets all the characters written up to that point by the <b>writer</b>, whose series were canceled. <b>Priest\'s</b> take on the character is prescient, being the closest we\'ve had to the current approach.'}    
 ];
 
 var deadpoolv25 = createCarouselText(deadpoolv25Array);
@@ -178,13 +178,13 @@ var deadpoolv3Array = [
     text: 'Under <b>Daniel Way</b> the title becomes farcical in nature.'},
     {img: 'assets/deadpoolv32.jpg',
     header: '',
-    text: 'While fidgeting around the big events at <b>Marvel</b> and mocking them, it\'s much less interested in showcasing the absurd inherent in superhero comics, preferring to creat something ludicrous of it\'s own.'},
+    text: 'While fidgeting around the big events at <b>Marvel</b> and mocking them, it\'s much less interested in showcasing the absurd inherent in superhero comics, preferring to create something ludicrous of it\'s own.'},
     {img: 'assets/deadpoolv33.jpg',
     header: '',
-    text: 'Way introduces a secondary set of narration -the one that usually breaks the fourth wall-, leaving behind secondary characters like Weasel, Blind Al or Cable.'},
+    text: 'Way introduces a secondary set of narration,the one that usually breaks the fourth wall, leaving behind secondary characters like Weasel, Blind Al or Cable.'},
     {img: 'assets/deadpoolv34.jpg',
     header: '',
-    text: 'It also raises the violence on display.'} 
+    text: 'It also raises the violence on display, although it could be argued this was already happening by Nicieza\'s <b>Cable and Deadpool</b> series.'} 
 ];
 
 var deadpoolv3 = createCarouselText(deadpoolv3Array);
@@ -204,7 +204,7 @@ var deadpoolv4Array = [
     text: 'That\'s because precisley these aspects were perpetuated through the Internet and fueled the character\'s popularity, contemporany Deadpool media is intentionally going for these almost brechtian moments of alienation.'},
     {img: 'assets/deadpoolv45.jpg',
     header: '',
-    text: 'The difference can be subtle and the result varies from series to series, but the current Deadpool has all the characteristics he had before, only reshuffled without the context from which they initially spurred.'} 
+    text: 'The difference can be subtle and the result varies from series to series, but the current Deadpool has all the characteristics he had before, only reshuffled without the context from which they initially spurred, earning his random humor that the Internet loves so dearly.'} 
 ];
 
 var deadpoolv4 = createCarouselText(deadpoolv4Array);
