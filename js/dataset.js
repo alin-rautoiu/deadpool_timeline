@@ -36,28 +36,13 @@ var dictionary = {
                 { name: "ambushbug", display: "Ambush Bug"}, //3
                 { name: "shehulk", display: "Sensational She-Hulk"}, //4
                 { name: "animalman", display: "Animal Man"}, //6
-                { name: "deadpoolv1", display: "Deadpool - Nicieza și Liefeld"},
-                { name: "deadpoolv2", display: 'Deadpool - Joe Kelly și Ed McGuinness'}, //5
+                { name: "deadpoolv1", display: "Deadpool - Nicieza and Liefeld"},
+                { name: "deadpoolv2", display: 'Deadpool - Joe Kelly and Ed McGuinness'}, //5
                 { name: "deadpoolv3", display: 'Deadpool - Christopher Priest'}, //5
                 { name: "deadpoolv4", display: "Deadpool - Daniel Way"}, //6
-                { name: "deadpoolv5", display: "Deadpool contemporan"}, //6
+                { name: "deadpoolv5", display: "Deadpool - Now"}, //6
                 { name: "invisible", display: ''}, //7                                
         ],
-        edges: [
-                { "The Spirit - Steranko": 2, name: 'spirit_fury'},
-                { "The Spirit - Daredevil de Frank Miller": 4, name: 'spirit_daredevil'},
-                { "The Spirit - Hawkeye de Fraction și Aja": 6, name: 'spirit_hawkeye'},
-                { "Krigstein - Daredevil de Frank Miller": 4, name: 'krigstein_daredevil'},
-                { "Krigstein - ": 6, name: 'krigstein_hawkeye'},
-                { display: 3, name: 'fury_master'},                                                
-                { display: 4, name: 'fury_daredevil'},
-                { display: 6, name: 'fury_hawkeye'},
-                { display: 4, name: 'master_daredevil'},
-                { display: 6, name: 'master_hawkeye'},
-                { display: 8, name: 'daredevil_bendisdare'},
-                { display: 6, name: 'bendisdare_hawkeye'},
-                { display: 6, name: 'daredevil_hawkeye'},                                                
-                { display: 6, name: 'nhawk_hawkeye'},
-                { display: 0, name: 'hawkeye_invisible'}
+        edges: [               
         ]
 }
