@@ -216,11 +216,11 @@ var text_dictionary = [
     {header: 'Animal Man', body: animalman_deadpoolv2},
     {header: 'Sensational She-Hulk', body: shehulk_deadpoolv25},
     {header: 'Ambush Bug', body: ambushbug_deadpoolv3},
-    {header: 'Deadpool - Nicieza și Liefeld', body: deadpoolv1},
-    {header: 'Deadpool - Joe Kelly și Ed McGuinness', body: deadpoolv2},
+    {header: 'Deadpool - Nicieza and Liefeld', body: deadpoolv1},
+    {header: 'Deadpool - Joe Kelly and Ed McGuinness', body: deadpoolv2},
     {header: 'Deadpool - Christopher Priest', body: deadpoolv25},
     {header: 'Deadpool - Daniel Way', body: deadpoolv3},
-    {header: 'Deadpool contemporan', body: deadpoolv4}
+    {header: 'Deadpool - Now', body: deadpoolv4}
 ]
 
                     
